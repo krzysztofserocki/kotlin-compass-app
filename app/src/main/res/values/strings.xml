@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">kotlin-compass-app</string>
+    <string name="app_name">CompassApp</string>
+    <string name="set_destination">Set destination</string>
+    <string name="welcome">Welcome</string>
+    <string name="in_the_app">in the CompassApp…!</string>
+    <string name="click_turtle">Click on this sweet turtle above to continue.</string>
 </resources>
