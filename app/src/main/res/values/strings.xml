@@ -1,7 +1,25 @@
 <resources>
     <string name="app_name">CompassApp</string>
     <string name="set_destination">Set destination</string>
+    <string name="back">Back</string>
     <string name="welcome">Welcome</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="save_destination">Save destination</string>
+    <string name="compass">This is compass.</string>
+    <string name="compass_hands">Red one to the north, blue one to the south.</string>
+    <string name="compass_arrow">Target to the destination.</string>
     <string name="in_the_app">in the CompassApp…!</string>
     <string name="click_turtle">Click on this sweet turtle above to continue.</string>
+    <string name="error_loading_directions">Error loading directions</string>
+    <string name="error_loading_location">Error loading location</string>
+    <string name="random_destination">Random destination</string>
+    <string name="distance_to_the_destination">Distance to the destination:</string>
+    <string name="destination_activity_information">This is the place where you can set your destination, goal, target… Just enter two variables called latitude and longitude, click SAVE DESTINATION and follow the compass!</string>
+    <string name="wrong_latitude">Wrong latitude</string>
+    <string name="latitude_out_of_range">Latitude is out of range (-90.0;90.0)</string>
+    <string name="wrong_longitude">Wrong longitude</string>
+    <string name="longitude_out_of_range">Longitude is out of range (-180.0;180.0)</string>
+    <string name="meters">m</string>
+    <string name="kilometers">km</string>
 </resources>

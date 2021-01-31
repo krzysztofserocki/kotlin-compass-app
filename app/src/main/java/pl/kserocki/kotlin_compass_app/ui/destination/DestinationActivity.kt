@@ -17,8 +17,17 @@ class DestinationActivity : DaggerAppCompatActivity() {
         launchFragment()
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        overridePendingTransition(
+            R.anim.fragment_fade_enter,
+            R.anim.fragment_fade_exit
+        )
+    }
+
     private fun launchFragment() {
-        var fragment = supportFragmentManager.findFragmentById(R.id.contentFrame) as DestinationFragment?
+        var fragment =
+            supportFragmentManager.findFragmentById(R.id.contentFrame) as DestinationFragment?
         if (fragment == null) {
             fragment = mInjectedFragment
             supportFragmentManager.addFragmentToActivity(fragment, R.id.contentFrame)

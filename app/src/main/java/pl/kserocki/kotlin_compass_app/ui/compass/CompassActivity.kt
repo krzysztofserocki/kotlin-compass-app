@@ -24,8 +24,15 @@ class CompassActivity : DaggerAppCompatActivity() {
         else requestPermission()
     }
 
+    override fun onBackPressed() {
+        finishAffinity()
+    }
 
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String>,
+        grantResults: IntArray
+    ) {
         if (requestCode == 1) {
             if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 // permission granted -> continue
@@ -36,7 +43,8 @@ class CompassActivity : DaggerAppCompatActivity() {
 
     // Basic method that launches specified fragment
     private fun launchFragment() {
-        var fragment = supportFragmentManager.findFragmentById(R.id.contentFrame) as CompassFragment?
+        var fragment =
+            supportFragmentManager.findFragmentById(R.id.contentFrame) as CompassFragment?
         if (fragment == null) {
             fragment = mInjectedFragment
             supportFragmentManager.addFragmentToActivity(fragment, R.id.contentFrame)
@@ -48,14 +56,17 @@ class CompassActivity : DaggerAppCompatActivity() {
     }
 
     private fun requestPermission() {
-        ActivityCompat.requestPermissions(this, arrayOf(
-            Manifest.permission.ACCESS_FINE_LOCATION,
-            Manifest.permission.ACCESS_COARSE_LOCATION
-        ), 1)
+        ActivityCompat.requestPermissions(
+            this, arrayOf(
+                Manifest.permission.ACCESS_FINE_LOCATION,
+                Manifest.permission.ACCESS_COARSE_LOCATION
+            ), 1
+        )
     }
 
     private fun checkFinePermission(): Boolean {
-        val result = ContextCompat.checkSelfPermission(this,
+        val result = ContextCompat.checkSelfPermission(
+            this,
             Manifest.permission.ACCESS_FINE_LOCATION
         )
 
@@ -63,7 +74,8 @@ class CompassActivity : DaggerAppCompatActivity() {
     }
 
     private fun checkCoarsePermission(): Boolean {
-        val result = ContextCompat.checkSelfPermission(this,
+        val result = ContextCompat.checkSelfPermission(
+            this,
             Manifest.permission.ACCESS_COARSE_LOCATION
         )
 
