@@ -2,11 +2,8 @@ package pl.kserocki.kotlin_compass_app.ui.base
 
 interface BaseContract {
 
-    interface View {
-    }
+    interface View
 
-    abstract class ViewModel : androidx.lifecycle.ViewModel() {
-
-    }
+    abstract class ViewModel : androidx.lifecycle.ViewModel()
 
 }

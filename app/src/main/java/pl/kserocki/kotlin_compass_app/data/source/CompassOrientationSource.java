@@ -33,8 +33,6 @@ public class CompassOrientationSource implements OrientationDataSource {
 
     /**
      * Function which set current orientation based on sensors.
-     *
-     * @return
      */
     @Override
     public Flowable<CompassOrientation> getOrientation() {

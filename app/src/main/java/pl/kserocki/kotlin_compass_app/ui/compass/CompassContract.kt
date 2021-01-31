@@ -12,8 +12,6 @@ interface CompassContract {
         fun goToDestinationActivity()
     }
 
-    abstract class ViewModel : BaseContract.ViewModel() {
-
-    }
+    abstract class ViewModel : BaseContract.ViewModel()
 
 }

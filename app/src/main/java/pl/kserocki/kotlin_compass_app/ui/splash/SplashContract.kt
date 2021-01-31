@@ -8,8 +8,6 @@ interface SplashContract {
         fun goToCompassActivity()
     }
 
-    abstract class ViewModel : BaseContract.ViewModel() {
-
-    }
+    abstract class ViewModel : BaseContract.ViewModel()
 
 }

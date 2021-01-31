@@ -3,6 +3,8 @@ package pl.kserocki.kotlin_compass_app.di.factory;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Map;
 
 import javax.inject.Inject;
@@ -16,9 +18,10 @@ public class CompassViewModelFactory implements ViewModelProvider.Factory {
         this.creators = creators;
     }
 
+    @NotNull
     @SuppressWarnings("unchecked")
     @Override
-    public <T extends ViewModel> T create(Class<T> modelClass) {
+    public <T extends ViewModel> T create(@NotNull Class<T> modelClass) {
         Provider<? extends ViewModel> creator = creators.get(modelClass);
         if (creator == null) {
             for (Map.Entry<Class<? extends ViewModel>, Provider<ViewModel>> entry : creators.entrySet()) {

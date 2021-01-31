@@ -8,8 +8,6 @@ interface DestinationContract {
         fun goBackToCompassActivity()
     }
 
-    abstract class ViewModel : BaseContract.ViewModel() {
-
-    }
+    abstract class ViewModel : BaseContract.ViewModel()
 
 }
